@@ -1,0 +1,40 @@
+{% extends "incl/base.html" %}
+{% load static %}
+
+{% block content %}
+      <div class="col-10">
+        <p><h2>Sign in</h2></p>
+        <small style="color: #dc3545">Wrong password!</small>
+        <div class="row">
+          <div class="col-1">
+            <p><h6>Login</h6></p>
+          </div>
+          <div class="col-3">
+            <p><form>
+              <div class="form-group">
+                <input class="title">
+              </div>
+            </form></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <p><h6>Password</h6></p>
+          </div>
+          <div class="col-3">
+            <p><form>
+              <div class="form-group">
+                <input class="title" type="password">
+              </div>
+            </form></p>
+          </div>
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2">
+              <p><button type="button" class="btn btn-pink shadow rounded">Log in!</button></p>
+              <a href="#" class="link-secondary">Create new account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock content %}

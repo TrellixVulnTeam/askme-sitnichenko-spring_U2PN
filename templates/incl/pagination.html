@@ -1,0 +1,39 @@
+{#<div class="pagination">#}
+{#    <span class="step-links">#}
+{#        {% if question.has_previous %}#}
+{#            <a href="?page=1">&laquo; first</a>#}
+{#            <a href="?page={{ questions.previous_page_number }}">previous</a>#}
+{#        {% endif %}#}
+{##}
+{#        <span class="current">#}
+{#            Page {{ questions.number }} of {{ questions.paginator.num_pages }}.#}
+{#        </span>#}
+{##}
+{#        {% if questions.has_next %}#}
+{#            <a href="?page={{ questions.next_page_number }}">next</a>#}
+{#            <a href="?page={{ questions.paginator.num_pages }}">last &raquo;</a>#}
+{#        {% endif %}#}
+{#    </span>#}
+{#</div>#}
+
+<div class="row">
+  <div class="col-3">
+      <span class="step-links">
+        <ul class="pagination" style="margin: 14px">
+
+            {% if questions.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ questions.previous_page_number }}" style="color: #C71585">Предыдущая</a></li>
+          <li class="page-item"><a class="page-link" href="?page={{ questions.previous_page_number }}" style="color: #C71585">{{ questions.previous_page_number }}</a></li>
+            {% endif %}
+
+          <li class="page-item"><a class="page-link" href="?page={{ questions.page_number }}" style="color: #C71585">{{ questions.number }}</a></li>
+
+            {% if questions.has_next %}
+          <li class="page-item"><a class="page-link" href="?page={{ questions.next_page_number }}" style="color: #C71585">{{ questions.next_page_number }}</a></li>
+          <li class="page-item"><a class="page-link" href="?page={{ questions.next_page_number }}" style="color: #C71585">Следующая</a></li>
+            {% endif %}
+
+        </ul>
+      </span>
+  </div>
+</div>

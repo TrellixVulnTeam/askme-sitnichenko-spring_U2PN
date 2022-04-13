@@ -1,0 +1,23 @@
+{% extends "incl/base.html" %}
+{% load static %}
+
+{% block content %}
+      <div class="col-10">
+          {% include "incl/single_question.html" %}
+          <hr color="black">
+          {% for ans in answers %}
+              {% include "incl/answer.html" %}
+          {% endfor %}
+        {% include "incl/answers_pagination.html" %}
+        <hr color="black">
+        <div class="row">
+          <p><form class="question_form">
+            <div class="form-group">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="border: 2px solid grey" placeholder="Enter your answer..."></textarea>
+              <p><small style="color: #dc3545">Sign in to answer</small></p>
+            </div>
+          </form></p>
+          <p><button type="button" class="btn btn-pink shadow rounded" style="margin-left: 15px">Answer!</button></p>
+        </div>
+      </div>
+        {% endblock content %}

@@ -1,0 +1,50 @@
+{% extends "incl/base.html" %}
+{% load static %}
+
+{% block content %}
+      <div class="col-10">
+        <p><h2>New Questions</h2></p>
+        <div class="row">
+          <div class="col-1">
+            <p><h6>Title</h6></p>
+          </div>
+          <div class="col-9">
+            <p><form>
+              <div class="form-group">
+                <input class="title" placeholder="Write your question here">
+                <small style="color: #dc3545">Sign in to ask</small>
+              </div>
+            </form></p>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-1">
+            <p><h6>Text</h6></p>
+          </div>
+          <div class="col-9">
+            <p><form>
+              <div class="form-group">
+                <textarea class="title" id="exampleFormControlTextarea1" rows="3" placeholder="Write the details"></textarea>
+                <small style="color: #dc3545">Sign in to ask</small>
+              </div>
+            </form></p>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-1">
+            <p><h6>Tags</h6></p>
+          </div>
+          <div class="col-9">
+            <p><form>
+              <div class="form-group">
+                <input class="title" placeholder="Write tags">
+                <small style="color: #dc3545">Sign in to ask</small>
+              </div>
+            </form></p>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-1"></div>
+          <div class="col-1">
+            <p><button type="button" class="btn btn-pink shadow rounded">Ask!</button></p>
+          </div>
+        </div>
+      </div>
+{% endblock content %}

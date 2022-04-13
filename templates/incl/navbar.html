@@ -1,0 +1,46 @@
+{% load static %}
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #C71585">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'index' %}"><strong>Ask-LoveLive!!</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="col-2"></div>
+        <div class = "col-5">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <a class="btn btn-outline-light btn-light" role="button" style="color: black" href="{% url 'new_question' %}">Ask!</a>
+          </form>
+        </div>
+        <div class = "col-2"></div>
+        <div class="col-1 block__inner_navbar">
+          <img  class="avatar" src="{% static "img/Kanan.png"  %}" alt="" style="background-color: #C71585">
+        </div>
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+              {% if user.is_authenticated%}
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="{% url 'settings' %}">Settings</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'login' %}">Log out</a>
+                  </li>
+              {% else %}
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'register' %}">Register</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'login' %}">Log in</a>
+                  </li>
+              {% endif %}
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

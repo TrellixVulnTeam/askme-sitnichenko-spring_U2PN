@@ -1,1 +1,1 @@
-# askme-sitnichenko-spring
+# Проект для дисциплины "web-технологии"

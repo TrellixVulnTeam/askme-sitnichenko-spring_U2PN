@@ -1,0 +1,31 @@
+{% load static %}
+
+        <div class="row question">
+          <div class="col-1 block__inner">
+            <img  class="avatar" src="{% static "img/Kanan.png"  %}" alt="">
+          </div>
+          <div class="col-10">
+            <a class="link-dark" href="{% url 'question' question.id %}"><h3>{{ question.title }}</h3></a>
+            <p>
+            {{ question.text }}
+            </p>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-secondary" style="background-color: lightpink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+              </svg>
+            </button>
+            +10
+          </div>
+          <div class="col-2">
+            <a href="{% url 'question' question.id %}" class="link-secondary">answers {{ question.num_answers }}</a>
+          </div>
+          <div class="col-4">
+            tags:
+            {% for tag in question.tags.all %}
+                <a href="{% url 'tag' tag.title %}" class="link-secondary">{{ tag.title }}</a>
+            {% endfor %}
+          </div>
+        </div>

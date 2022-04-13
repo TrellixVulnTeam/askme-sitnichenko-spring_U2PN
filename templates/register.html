@@ -1,0 +1,98 @@
+{% extends "incl/base.html" %}
+{% load static %}
+
+{% block content %}
+      <div class="col-10">
+        <p><h2>Register</h2></p>
+        <small style="color: #dc3545">This email address already registred</small>
+        <div class="row">
+          <div class="col-2">
+            <p><h6>Login</h6></p>
+          </div>
+          <div class="col-3">
+            <p><form>
+              <div class="form-group">
+                <input class="title">
+              </div>
+            </form></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <p><h6>Email</h6></p>
+          </div>
+          <div class="col-3">
+            <p><form>
+              <div class="form-group">
+                <input class="title">
+              </div>
+            </form></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <p><h6>NickName</h6></p>
+          </div>
+          <div class="col-3">
+            <p><form>
+              <div class="form-group">
+                <input class="title">
+              </div>
+            </form></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <p><h6>Password</h6></p>
+          </div>
+          <div class="col-3">
+            <p><form>
+              <div class="form-group">
+                <input class="title" type="password">
+              </div>
+            </form></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <p><h6>Repeat password</h6></p>
+          </div>
+          <div class="col-3">
+            <p><form>
+              <div class="form-group">
+                <input class="title" type="password">
+              </div>
+            </form></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <p><h6>Upload avatar</h6></p>
+          </div>
+          <div class="col-3">
+            <div class="col-1 block__inner_question" style="margin-top: 30px">
+              <p><img  class="avatar" src="static/img/avatar.jpg" alt=""></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-3">
+            <p><form>
+              <div class="form-group">
+                <input class="title">
+              </div>
+            </form></p>
+          </div>
+          <div class="col-2">
+            <p><button type="button" class="btn btn-secondary" style="margin-top: 13px">Choose</button></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-2">
+            <p><button type="button" class="btn btn-pink shadow rounded">Register</button></p>
+          </div>
+        </div>
+      </div>
+{% endblock content %}
